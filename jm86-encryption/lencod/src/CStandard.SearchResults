@@ -1,0 +1,6 @@
+---- fread Æ¥Åä (5 ÔÚ 2 ÎÄ¼þ ) ----
+Configfile.c:  // as reported by fread() below will be often smaller due to CR/LF to CR conversion and/or
+Configfile.c:  FileSize = fread (buf, 1, FileSize, f);
+Image.c:  if (fread (sf->yf, 1, bytes_y, p_in) != bytes_y)
+Image.c:  if (fread (sf->uf, 1, bytes_uv, p_in) != bytes_uv)
+Image.c:  if (fread (sf->vf, 1, bytes_uv, p_in) != bytes_uv)

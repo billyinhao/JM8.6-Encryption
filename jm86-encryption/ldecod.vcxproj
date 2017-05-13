@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{5912DF0B-57C6-AA62-27BF-CF2FAB2E78F7}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\ldecod/Debug\</OutDir>
+    <IntDir>.\ldecod/Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\ldecod\Release\</OutDir>
+    <IntDir>.\ldecod\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>ldecod/inc;lcommon/inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\ldecod/Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\ldecod/Debug\ldecod.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\ldecod/Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\ldecod/Debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\ldecod/Debug\ldecod.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\ldecod/Debug\ldecod.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>./bin/ldecod.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>ldecod\inc;lcommon\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\ldecod\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\ldecod\Release\ldecod.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\ldecod\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\ldecod\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\ldecod\Release\ldecod.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\ldecod\Release\ldecod.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>./bin/ldecod.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ldecod\src\annexb.c" />
+    <ClCompile Include="ldecod\src\biaridecod.c" />
+    <ClCompile Include="ldecod\src\block.c" />
+    <ClCompile Include="ldecod\src\cabac.c" />
+    <ClCompile Include="ldecod\src\context_ini.c" />
+    <ClCompile Include="ldecod\src\erc_api.c" />
+    <ClCompile Include="ldecod\src\erc_do_i.c" />
+    <ClCompile Include="ldecod\src\erc_do_p.c" />
+    <ClCompile Include="ldecod\src\errorconcealment.c" />
+    <ClCompile Include="ldecod\src\filehandle.c" />
+    <ClCompile Include="ldecod\src\fmo.c" />
+    <ClCompile Include="ldecod\src\header.c" />
+    <ClCompile Include="ldecod\src\image.c" />
+    <ClCompile Include="ldecod\src\ldecod.c" />
+    <ClCompile Include="ldecod\src\leaky_bucket.c" />
+    <ClCompile Include="ldecod\src\loopFilter.c" />
+    <ClCompile Include="ldecod\src\macroblock.c" />
+    <ClCompile Include="ldecod\src\mb_access.c" />
+    <ClCompile Include="ldecod\src\mbuffer.c" />
+    <ClCompile Include="ldecod\src\memalloc.c" />
+    <ClCompile Include="ldecod\src\nal.c" />
+    <ClCompile Include="ldecod\src\nal_part.c" />
+    <ClCompile Include="ldecod\src\nalu.c" />
+    <ClCompile Include="ldecod\src\nalucommon.c" />
+    <ClCompile Include="ldecod\src\output.c" />
+    <ClCompile Include="ldecod\src\parset.c" />
+    <ClCompile Include="ldecod\src\parsetcommon.c" />
+    <ClCompile Include="ldecod\src\rtp.c" />
+    <ClCompile Include="ldecod\src\sei.c" />
+    <ClCompile Include="ldecod\src\vlc.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ldecod\inc\annexb.h" />
+    <ClInclude Include="ldecod\inc\biaridecod.h" />
+    <ClInclude Include="ldecod\inc\block.h" />
+    <ClInclude Include="ldecod\inc\cabac.h" />
+    <ClInclude Include="ldecod\inc\context_ini.h" />
+    <ClInclude Include="ldecod\inc\contributors.h" />
+    <ClInclude Include="ldecod\inc\ctx_tables.h" />
+    <ClInclude Include="ldecod\inc\defines.h" />
+    <ClInclude Include="ldecod\inc\elements.h" />
+    <ClInclude Include="ldecod\inc\erc_api.h" />
+    <ClInclude Include="ldecod\inc\erc_do.h" />
+    <ClInclude Include="ldecod\inc\erc_globals.h" />
+    <ClInclude Include="ldecod\inc\errorconcealment.h" />
+    <ClInclude Include="ldecod\inc\fmo.h" />
+    <ClInclude Include="ldecod\inc\global.h" />
+    <ClInclude Include="ldecod\inc\header.h" />
+    <ClInclude Include="ldecod\inc\image.h" />
+    <ClInclude Include="ldecod\inc\leaky_bucket.h" />
+    <ClInclude Include="ldecod\inc\loopfilter.h" />
+    <ClInclude Include="ldecod\inc\macroblock.h" />
+    <ClInclude Include="ldecod\inc\mb_access.h" />
+    <ClInclude Include="ldecod\inc\mbuffer.h" />
+    <ClInclude Include="ldecod\inc\memalloc.h" />
+    <ClInclude Include="ldecod\inc\nalu.h" />
+    <ClInclude Include="ldecod\inc\nalucommon.h" />
+    <ClInclude Include="ldecod\inc\output.h" />
+    <ClInclude Include="ldecod\inc\parset.h" />
+    <ClInclude Include="ldecod\inc\parsetcommon.h" />
+    <ClInclude Include="ldecod\inc\rtp.h" />
+    <ClInclude Include="ldecod\inc\sei.h" />
+    <ClInclude Include="ldecod\inc\vlc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="bin\decoder.cfg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,9 @@
+---- encode_one_macroblock Æ¥Åä (8 ÔÚ 4 ÎÄ¼þ ) ----
+Global.h (e:\visual 2010 project\jm86\jm86\lencod\inc):void encode_one_macroblock (void);
+Macroblock.c:  if (!input->rdopt) // the rd-opt part does not work correctly (see encode_one_macroblock)
+Rdopt.c: void encode_one_macroblock ()
+Slice.c:      encode_one_macroblock ();
+Slice.c:        encode_one_macroblock ();     // code the MB as frame
+Slice.c:        encode_one_macroblock ();     // code the MB as frame
+Slice.c:        encode_one_macroblock ();     // code the MB as frame
+Slice.c:        encode_one_macroblock ();     // code the MB as frame
